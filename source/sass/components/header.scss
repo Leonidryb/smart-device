@@ -18,6 +18,10 @@
 .header__item {
   margin-right: 86px;
 
+  &:nth-child(2) {
+    margin-right: 47px;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -79,7 +83,6 @@
 
   .header__container {
     padding-left: 17px;
-    padding-right: 16px;
   }
 
   .header__list {

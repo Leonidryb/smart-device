@@ -53,21 +53,31 @@
         </ul>
       </div>
     </header>
-    <main class="main-page">
-      <h1 class="visually-hidden">Компания Smart Device</h1>
-      <section class="main-page__item banner">
+    <h1 class="visually-hidden">Компания Smart Device</h1>
+    <section class="banner">
+      <div class="container banner__container">
         <div class="banner__img">
-          <img src="img/banner-desktop@1x.png" width="705" height="515" alt="Печатные платы" />
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/banner-mobile@1x.png 1x, img/banner-mobile@2x.png 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/banner-tablet@1x.png 1x, img/banner-tablet@2x.png 2x" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/banner-desktop@1x.png 1x, img/banner-desktop@2x.png 2x" type="image/webp">
+            <img src="img/banner-desktop@1x.png" width="705" height="515" alt="Печатные платы" />
+          </picture>
         </div>
         <div class="banner__content">
-          <h2 class="banner__title">Печатные платы</h2>
+          <h2 class="banner__title">Печатные <span>платы</span></h2>
           <p class="banner__text">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="banner__btn btn" href="#">Получить бесплатную консультацию</a>
+          <a href="#" class="btn  btn--blue  banner__btn">
+            <span class="banner__btn-text banner__btn-text--desktop">Получить бесплатную консультацию</span>
+            <span class="banner__btn-text banner__btn-text--mobile">Бесплатная консультация</span>
+          </a>
           <button class="banner__scroll" type="button">Скролл вниз</button>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   </div>
+  <main>
+  </main>
 </body>
 
 </html>
