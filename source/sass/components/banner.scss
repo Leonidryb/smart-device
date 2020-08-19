@@ -88,6 +88,10 @@
   &:hover {
     opacity: 1;
   }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .banner__btn-text--mobile {
