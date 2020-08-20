@@ -1,0 +1,13 @@
+.footer {
+  padding-top: 65px;
+  background-color: $white-dark;
+}
+
+.footer__row-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__item {
+  outline: 1px solid red;
+}
