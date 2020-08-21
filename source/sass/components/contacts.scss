@@ -1,0 +1,44 @@
+.contacts {
+  color: $grey-dark;
+  width: 333px;
+  padding-left: 3px;
+  flex-shrink: 0;
+}
+
+.contacts h2 {
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.contacts__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.contacts__item {
+  margin-bottom: 8px;
+}
+
+.contacts__link {
+  color: inherit;
+  letter-spacing: -0.044em;
+  opacity: 0.5;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

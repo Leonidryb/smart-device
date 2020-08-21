@@ -1,3 +1,8 @@
+.social {
+  width: 220px;
+  flex-shrink: 0;
+}
+
 .social__list {
   @include list-reset;
   display: flex;
@@ -17,5 +22,32 @@
 
   &:active {
     opacity: 0.4;
+  }
+}
+
+.social__company {
+  display: none;
+
+  font-family: $font-PTMono;
+  font-size: 13px;
+  line-height: 24px;
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: $tablet) {
+  .social {
+    width: 721px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social__list {
+    margin: 0;
+  }
+
+  .social__company {
+    display: block;
   }
 }
