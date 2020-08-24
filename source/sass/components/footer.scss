@@ -6,12 +6,30 @@
 .footer__container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 52px;
 }
 
 @media (max-width: $tablet) {
+  .footer {
+    padding-top: 19px;
+  }
+
   .footer__container {
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    padding: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .footer {
+    padding-top: 46px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    margin-bottom: 0;
   }
 }
