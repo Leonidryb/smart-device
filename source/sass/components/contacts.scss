@@ -23,14 +23,7 @@
 
 .contacts__list {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
-
-// .contacts__item {
-//   margin-bottom: 8px;
-// }
 
 .contacts__link {
   color: inherit;
@@ -59,6 +52,7 @@
 
 @media (max-width: $mobile) {
   .contacts {
+    position: relative;
     width: 100%;
     margin-right: 0;
     padding-top: 28px;
@@ -68,6 +62,10 @@
   }
 
   .contacts h2 {
-    margin-bottom: 33px;
+    margin-bottom: 0;
+  }
+
+  .contacts__list {
+    margin-top: 33px;
   }
 }

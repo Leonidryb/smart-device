@@ -62,6 +62,7 @@
 
 @media (max-width: $mobile) {
   .nav {
+    position: relative;
     width: 100%;
     margin-left: 0;
     padding-top: 28px;
@@ -69,5 +70,13 @@
     padding-left: 15px;
     padding-right: 15px;
     border-bottom: 1px solid #626962;
+  }
+
+  .nav h2 {
+    margin-bottom: 0;
+  }
+
+  .nav__list {
+    margin-top: 25px;
   }
 }

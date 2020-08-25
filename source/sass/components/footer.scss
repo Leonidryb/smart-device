@@ -7,7 +7,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 52px;
+  margin-bottom: 56px;
+}
+
+.footer__btn {
+  display: none;
 }
 
 @media (max-width: $tablet) {
@@ -31,5 +35,38 @@
   .footer__container {
     flex-direction: column;
     margin-bottom: 0;
+  }
+
+  .footer__btn {
+    @include button-reset;
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/icon-plus.svg") center no-repeat transparent;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+  .footer__btn--opened {
+    background-image: url("../img/icon-minus.svg");
+  }
+
+  .footer__list {
+    display: none;
+  }
+
+  .footer__list--opened {
+    display: block;
   }
 }
