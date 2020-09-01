@@ -1,0 +1,170 @@
+.services {
+  padding-top: 87px;
+  padding-bottom: 97px;
+  background-color: $grey-dark;
+}
+
+.services h2 {
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 53px;
+}
+
+.services__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  margin-right: 2.56%;
+  margin-bottom: 30px;
+  width: 31.62%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.services__link {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.9;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $grey-dark;
+    opacity: 0.7;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 63px;
+    height: 63px;
+    background: url("../img/icon-vector.svg") center no-repeat $blue;
+  }
+}
+
+.services h3 {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  z-index: 2;
+
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  margin: 0;
+}
+
+@media (max-width: $tablet) {
+  .services {
+    padding-top: 50px;
+    padding-bottom: 32px;
+  }
+
+  .services__container {
+    padding-right: 24px;
+    padding-left: 26px;
+  }
+
+  .services__list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .services__item {
+    margin-right: 0;
+    margin-bottom: 46px;
+    width: 100%;
+    min-height: 256px;
+  }
+
+  .services__link img {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    line-height: 45px;
+    padding-right: 100px;
+    margin-bottom: 49px;
+  }
+
+  .services h3 {
+    top: 40px;
+  }
+
+  .services__link--light h3 {
+    top: 50px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .services {
+    padding-top: 50px;
+    padding-bottom: 34px;
+  }
+
+  .services__container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .services__item {
+    margin-bottom: 30px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+    line-height: 39px;
+    padding-right: 0;
+    padding-left: 9px;
+    margin-bottom: 42px;
+  }
+
+  .services h3 {
+    top: 20px;
+    left: 35px;
+  }
+
+  .services__link--light h3 {
+    top: 30px;
+  }
+}
