@@ -1,0 +1,47 @@
+.feedback {
+  position: relative;
+  min-height: 670px;
+  padding: 90px 40px;
+  background: url("../img/icon-triangle-feedback.svg") left 174px top -60px no-repeat $blue;
+}
+
+.feedback__container {
+  background: url("../img/plane-desktop@1x.png") left 118px top 71px no-repeat transparent;
+  background-size: 511px 288px;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .contacts__container {
+    background-image: url("../img/plane-desktop@2x.png");
+  }
+}
+
+.feedback__wrapper {
+  max-width: 570px;
+  min-height: 461px;
+  margin-left: auto;
+  margin-right: 121px;
+}
+
+.feedback h2 {
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+  margin: 0;
+  margin-left: -3px;
+  margin-bottom: 10px;
+}
+
+.feedback p {
+  font-family: $font-PTMono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 52px;
+}
