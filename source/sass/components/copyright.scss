@@ -47,16 +47,18 @@
 }
 
 @media (max-width: $tablet) {
-  .copyright__text--rights,
-  .copyright__text--company {
-    display: none;
-  }
-}
-
-@media (max-width: $tablet) {
   .copyright {
     padding-top: 21px;
     padding-bottom: 24px;
+  }
+
+  .copyright__container {
+    padding-right: 23px;
+  }
+
+  .copyright__text--rights,
+  .copyright__text--company {
+    display: none;
   }
 }
 

@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 25;
+  width: 490px;
+  min-height: 0;
+  transform: translate(-50%, -50%);
+  margin-top: -30px;
+  padding: 30px 39px 36px 39px;
+  background-color: $blue;
+}
+
+.modal h2 {
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  font-family: $font-PTMono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  padding-right: 10px;
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.modal input {
+  height: 52px;
+  width: 100%;
+  padding-left: 24px;
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+
+.modal textarea {
+  padding-left: 24px;
+  min-height: 104px;
+  margin-bottom: 30px;
+}
+
+.form__submit {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.form__submit label {
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+.form__btn {
+  width: 100%;
+  margin-bottom: 34px;
+  min-width: 0;
+  margin-right: 0;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-close.svg") top right no-repeat transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 0;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $white;
+  }
+}

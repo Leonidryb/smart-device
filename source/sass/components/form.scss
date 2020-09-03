@@ -28,7 +28,7 @@
   font-size: 16px;
   line-height: 22px;
   color: $white;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   padding: 12px 14px 16px 17px;
   border: none;
   border-radius: 0;
@@ -102,4 +102,36 @@
 
 .form__submit [type="checkbox"]:focus + label {
   opacity: 1;
+}
+
+@media (max-width: $tablet) {
+  .form textarea {
+    margin-bottom: 43px;
+    min-height: 159px;
+  }
+
+  .form__submit label {
+    padding-left: 33px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .form input {
+    width: 100%;
+    margin-bottom: 33px;
+    margin-left: 0;
+  }
+
+  .form textarea {
+    min-height: 104px;
+    margin-bottom: 25px;
+  }
+
+  .form__submit {
+    flex-direction: column;
+  }
+
+  .form__btn {
+    margin-bottom: 30px;
+  }
 }
