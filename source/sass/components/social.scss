@@ -32,7 +32,7 @@
   }
 }
 
-.social__company {
+.social p {
   display: none;
   font-family: $font-PTMono;
   font-size: 13px;
@@ -60,7 +60,7 @@
     justify-content: flex-end;
   }
 
-  .social__company {
+  .social p {
     display: block;
     margin: 0;
     padding-top: 5px;
@@ -84,7 +84,7 @@
     margin-bottom: 25px;
   }
 
-  .social__company {
+  .social p {
     padding: 0;
     margin-bottom: 33px;
   }

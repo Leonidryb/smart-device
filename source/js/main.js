@@ -1,5 +1,5 @@
 'use strict';
-// Открывает и закрывает Аккордеон
+// Аккордеон
 var accordions = document.querySelectorAll('.js-accordion');
 var accordionsBtn = document.querySelectorAll('.footer__btn');
 var accordionsList = document.querySelectorAll('.footer__list');
