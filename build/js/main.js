@@ -1,3 +1,4 @@
+/* eslint-disable new-cap, no-undef */
 'use strict';
 var body = document.querySelector('body');
 var contactsBtn = document.querySelector('.header__btn');

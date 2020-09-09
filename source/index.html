@@ -10,6 +10,9 @@
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/main.js" as="script">
+  <link rel="preload" href="js/vendor.js" as="script">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -179,12 +182,12 @@
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" name="name-field" id="name" placeholder="Имя" required>
             <label class="visually-hidden" for="phone">Телефон</label>
-            <input type="tel" name="phone-field" id="phone" placeholder="Телефон" required>
+            <input type="tel" name="phone-field" minlength="16" id="phone" placeholder="Телефон" required>
             <label class="visually-hidden" for="message">Ваше сообщение</label>
             <textarea name="message-field" id="message" placeholder="Ваш вопрос" required></textarea>
             <div class="form__submit">
               <button class="btn btn--question form__btn" type="submit">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" name="personal-data-field" id="personal-data" checked>
+              <input class="visually-hidden" type="checkbox" name="personal-data-field" id="personal-data" checked required>
               <label for="personal-data">Я согласен на обработку персональных данных</label>
             </div>
           </form>
@@ -299,12 +302,12 @@
         <label class="visually-hidden" for="name-modal">Имя</label>
         <input type="text" name="name-field" id="name-modal" placeholder="Имя" required>
         <label class="visually-hidden" for="phone-modal">Телефон</label>
-        <input type="tel" name="phone-field" id="phone-modal" placeholder="Телефон" required>
+        <input type="tel" name="phone-field" minlength="16" id="phone-modal" placeholder="Телефон" required>
         <label class="visually-hidden" for="message-modal">Ваше сообщение</label>
         <textarea name="message-field" id="message-modal" placeholder="Ваш вопрос" required></textarea>
         <div class="form__submit">
           <button class="btn btn--question form__btn" type="submit">отправить</button>
-          <input class="visually-hidden" type="checkbox" name="personal-data-field" id="personal-data-modal" checked>
+          <input class="visually-hidden" type="checkbox" name="personal-data-field" id="personal-data-modal" checked required>
           <label for="personal-data-modal">Я согласен на обработку персональных данных</label>
         </div>
       </form>
