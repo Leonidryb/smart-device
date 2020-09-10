@@ -17,14 +17,14 @@
 
 .header__item {
   margin-right: 86px;
+}
 
-  &:nth-child(2) {
-    margin-right: 47px;
-  }
+.header__item--tel {
+  margin-right: 47px;
+}
 
-  &:last-child {
-    margin-right: 0;
-  }
+.header__item--btn {
+  margin-right: 0;
 }
 
 .header__link {
@@ -61,10 +61,10 @@
 
   .header__item {
     margin-right: 0;
+  }
 
-    &:nth-child(2) {
-      margin-right: 0;
-    }
+  .header__item--mail {
+    margin-right: 25px;
   }
 
   .header__link-text {
@@ -74,7 +74,6 @@
   .header__link-icon--mail {
     width: 25px;
     height: 18px;
-    margin-right: 33px;
   }
 
   .header__link-icon--phone {
@@ -97,7 +96,7 @@
     margin-right: 8px;
   }
 
-  .header__link-icon--mail {
-    margin-right: 25px;
+  .header__item--mail {
+    margin-right: 14px;
   }
 }

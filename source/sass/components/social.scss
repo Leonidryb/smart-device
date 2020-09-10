@@ -51,7 +51,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #626962;
   }
 
   .social__list {
@@ -77,6 +76,7 @@
     flex-direction: column;
     margin-bottom: 0;
     padding-bottom: 49px;
+    border-bottom: 1px solid #626962;
   }
 
   .footer__logo {

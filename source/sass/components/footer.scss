@@ -16,7 +16,17 @@
 
 @media (max-width: $tablet) {
   .footer {
+    position: relative;
     padding-top: 19px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 96px;
+      background-color: #626962;
+    }
   }
 
   .footer__container {
@@ -31,6 +41,10 @@
 @media (max-width: $mobile) {
   .footer {
     padding-top: 46px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .footer__container {

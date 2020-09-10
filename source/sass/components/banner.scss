@@ -105,8 +105,9 @@
 
 @media (max-width: $tablet) {
   .banner {
-    min-height: 612px;
+    min-height: 614px;
     padding-top: 116px;
+    padding-bottom: 106px;
   }
 
   .banner__content {
@@ -138,7 +139,7 @@
 
   .banner__content p {
     min-width: 356px;
-    margin: 0 0 55px 121px;
+    margin: 0 0 55px 118px;
     font-size: 18px;
     line-height: 156.8%;
 
