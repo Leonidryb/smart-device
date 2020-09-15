@@ -1,4 +1,4 @@
-/* eslint-disable new-cap, no-undef */
+/* eslint-disable new-cap, no-undef, max-nested-callbacks */
 'use strict';
 
 (function () {
@@ -11,8 +11,8 @@
   var accordions = document.querySelectorAll('.js-accordion');
   var accordionsBtn = document.querySelectorAll('.footer__btn');
   var accordionsList = document.querySelectorAll('.footer__list');
-  var contactsForm = document.querySelector('#contacts .form');
-  var contactsFormModal = document.querySelector('.modal .form');
+  var contactsForm = document.querySelector('.feedback .form');
+  var contactsFormModal = document.querySelector('.modal form');
   var nameInput = document.querySelector('#name');
   var nameInputModal = document.querySelector('#name-modal');
   var phoneInput = document.querySelector('#phone');
@@ -24,10 +24,11 @@
   var bannerScroll = document.querySelector('.banner__scroll');
   var advantages = document.querySelector('#advantages');
 
-  // Аккордеон
+  // Accordion
   accordions.forEach(function (accordion) {
     var btn = accordion.querySelector('.footer__btn');
     var list = accordion.querySelector('.footer__list');
+    var btnTitle = accordion.querySelector('h2');
 
     btn.addEventListener('click', function () {
       if (btn.classList.contains('footer__btn--opened')) {
@@ -47,9 +48,28 @@
         list.classList.add('footer__list--opened');
       }
     });
+
+    btnTitle.addEventListener('click', function () {
+      if (btn.classList.contains('footer__btn--opened')) {
+        btn.classList.remove('footer__btn--opened');
+      } else {
+        accordionsBtn.forEach(function (accordionBtn) {
+          accordionBtn.classList.remove('footer__btn--opened');
+        });
+        btn.classList.add('footer__btn--opened');
+      }
+      if (list.classList.contains('footer__list--opened')) {
+        list.classList.remove('footer__list--opened');
+      } else {
+        accordionsList.forEach(function (accordionList) {
+          accordionList.classList.remove('footer__list--opened');
+        });
+        list.classList.add('footer__list--opened');
+      }
+    });
   });
 
-  // Модальное окно
+  // Modal
   if (contactsBtn) {
     contactsBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -93,10 +113,9 @@
     });
   }
 
-  // Local storage
+  //  localStorage
   if (contactsForm) {
-    contactsForm.addEventListener('submit', function (event) {
-      event.preventDefault();
+    contactsForm.addEventListener('submit', function () {
 
       localStorage.setItem('name-field', nameInput.value);
       localStorage.setItem('phone-field', phoneInput.value);
@@ -105,8 +124,7 @@
   }
 
   if (contactsFormModal) {
-    contactsFormModal.addEventListener('submit', function (event) {
-      event.preventDefault();
+    contactsFormModal.addEventListener('submit', function () {
 
       localStorage.setItem('name-modal', nameInputModal.value);
       localStorage.setItem('phone-modal', phoneInputModal.value);
@@ -114,7 +132,8 @@
     });
   }
 
-  // Скролл
+
+  // Scroll
   if (bannerBtn) {
     bannerBtn.addEventListener('click', function () {
       window.scrollBy({top: (contacts.offsetTop - window.scrollY), behavior: 'smooth'});
@@ -127,7 +146,7 @@
     });
   }
 
-  // Валидация телефона
+  // Phone mask
   var maskOptions = {
     mask: '+{7}(000)000-00-00'
   };
