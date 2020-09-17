@@ -24,7 +24,7 @@
   var bannerScroll = document.querySelector('.banner__scroll');
   var advantages = document.querySelector('#advantages');
 
-  // Аккордеон
+  // Accordion
   accordions.forEach(function (accordion) {
     var btn = accordion.querySelector('.footer__btn');
     var list = accordion.querySelector('.footer__list');
@@ -69,7 +69,7 @@
     });
   });
 
-  // Модальное окно
+  // Modal
   if (contactsBtn) {
     contactsBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -133,7 +133,7 @@
   }
 
 
-  // Скролл
+  // Scroll
   if (bannerBtn) {
     bannerBtn.addEventListener('click', function () {
       window.scrollBy({top: (contacts.offsetTop - window.scrollY), behavior: 'smooth'});
@@ -146,7 +146,7 @@
     });
   }
 
-  // Валидация телефона
+  // Phone mask
   var maskOptions = {
     mask: '+{7}(000)000-00-00'
   };
